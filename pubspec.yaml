@@ -1,9 +1,9 @@
 name: dart_utils
 description: A collection of useful helpers for Dart providing solutions for different situations.
-version: 1.0.2
+version: 2.0.0
 author: Florin Bratan <florin@leadcode.dev>
 homepage: https://leadcode.dev
 repository: https://github.com/bratan/dart_utils
 
 environment:
-  sdk: '>=2.5.0 <3.0.0'
+  sdk: '>=2.12.0 <3.0.0'
