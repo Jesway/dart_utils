@@ -1,13 +1,13 @@
-T enumFromString<T>(List<T> enumValues, String value)
+T? enumFromString<T>(List<T>? enumValues, String? value)
 {
-if (value == null || enumValues == null) return null;
+  if (value == null || enumValues == null) return null;
 
-return value.contains(".") ?
-    enumValues.singleWhere((x) => x.toString().toLowerCase() == value.toLowerCase(), orElse: () => null) :
-    enumValues.singleWhere((x) => enumToString(x).toLowerCase() == value.toLowerCase(), orElse: () => null);
+  return value.contains(".") ?
+      enumValues.singleWhere((x) => x.toString().toLowerCase() == value.toLowerCase(), orElse: () => null as T) :
+      enumValues.singleWhere((x) => enumToString(x)?.toLowerCase() == value.toLowerCase(), orElse: () => null as T);
 }
 
-String enumToString (enumItem)
+String? enumToString (enumItem)
 {
     if (enumItem == null) return null;
 
